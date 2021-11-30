@@ -6,6 +6,10 @@ const links = document.querySelectorAll('.nav-link')
 const linksArray = Array.from(links);
 const welcomeBus = document.querySelectorAll('h2');
 const welcomeBusArray = Array.from(welcomeBus);
+const images = document.getElementsByTagName('img');
+const imagesArray = Array.from(images);
+const button = document.getElementsByClassName('btn');
+const buttonArray = Array.from(button);
 
 //logo
 logo.addEventListener('mouseover', event => {
@@ -23,7 +27,8 @@ linksArray[0].addEventListener('click', event => {
     event.target.style.color = 'cyan';
 })
 linksArray[1].addEventListener('click', event => {
-    event.target.style.color = 'cyan';
+    event.target.style.opacity = '50%';
+    console.log('is this working?');
 })
 linksArray[2].addEventListener('click', event => {
     event.target.style.color = 'cyan';
@@ -44,4 +49,20 @@ welcomeBusArray[2].addEventListener('mouseover', event => {
 })
 welcomeBusArray[3].addEventListener('mouseover', event => {
     event.target.style.color = 'pink';
+})
+
+//images
+imagesArray[0].addEventListener('mouseover', event => {
+    event.target.style.opacity = '50%';
+})
+
+//buttons
+buttonArray[0].addEventListener('click', event => {
+    alert('Bring sunscreen!');
+})
+buttonArray[1].addEventListener('click', event => {
+    alert('Dust off your hiking boots!');
+})
+buttonArray[2].addEventListener('click', event => {
+    alert('Get your bathing suit ready!');
 })
